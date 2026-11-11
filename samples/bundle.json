@@ -1,0 +1,11 @@
+{
+  "name": "在途航次的延迟入组与竞争终点统计",
+  "files": [
+    {
+      "path": "voyages.json"
+    },
+    {
+      "path": "bad_records.json"
+    }
+  ]
+}
