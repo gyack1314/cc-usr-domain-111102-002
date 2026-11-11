@@ -31,3 +31,6 @@ class Catalog:
         import json
         with self.connection() as conn:
             return [json.loads(r[0]) for r in conn.execute('SELECT body FROM source_rows WHERE import_id=? AND source=? ORDER BY ordinal',(number,source))]
+    def summary_sources(self,number):
+        with self.connection() as conn:
+            return [r[0] for r in conn.execute('SELECT DISTINCT source FROM source_rows WHERE import_id=? ORDER BY source',(number,))]
